@@ -368,6 +368,7 @@ n you can open the file and write all the files you don’t want to add on the r
 *.sdf
 *.pyc
 *.xml
+*.cache
 ipch/
 obj/
 [Bb]in
