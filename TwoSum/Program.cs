@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
+using System.Reflection.Metadata.Ecma335;
 
 namespace TwoSum
 {
@@ -7,28 +9,29 @@ namespace TwoSum
     {
         static void Main(string[] args)
         {
-            int[] num = new int[] { 2,7,7,11 };
-            int trg = 13;
-            int[] res = TwoSum(num, trg);
-            Console.WriteLine($"Locations={res[0]},{res[1]}");
+            int[] array = new int[] { 1,1};
+            Console.WriteLine(string.Join(',', FindDisappearedNumbers(array)));
         }
 
-        public static int[] TwoSum(int[] nums, int target)
+        public static IList<int> FindDisappearedNumbers(int[] nums)
         {
-            Dictionary<int, int> tempMap = new Dictionary<int, int>();
-            for (int i = 0; i < nums.Length; i++)
+            List<int> res = new List<int>();
+            if (nums == null || nums.Length == 0) return nums;
+            HashSet<int> distincts = new HashSet<int>(nums);
+            for(int i=1;i<=nums.Length;i++)
             {
-                if (tempMap.ContainsKey(target - nums[i]))
-                {
-                    return new int[] { tempMap[target - nums[i]], i };
-                }
-                else
-                {
-                    if (!tempMap.ContainsKey(nums[i]))
-                        tempMap.Add(nums[i], i);
-                }
+                if (!distincts.Contains(i))
+                    res.Add(i);
             }
-            return null;
+            return res;
+        }
+        public static void Swap(int[] arr, int i, int j)
+        {
+            //arr[i]=10, arr[j]=20
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+
         }
     }
 }

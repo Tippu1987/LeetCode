@@ -4,8 +4,10 @@ L:\Practice\Coding\LeetCode\TwoSum\bin\Debug\netcoreapp3.1\TwoSum.runtimeconfig.
 L:\Practice\Coding\LeetCode\TwoSum\bin\Debug\netcoreapp3.1\TwoSum.runtimeconfig.dev.json
 L:\Practice\Coding\LeetCode\TwoSum\bin\Debug\netcoreapp3.1\TwoSum.dll
 L:\Practice\Coding\LeetCode\TwoSum\bin\Debug\netcoreapp3.1\TwoSum.pdb
-L:\Practice\Coding\LeetCode\TwoSum\obj\Debug\netcoreapp3.1\TwoSum.csprojAssemblyReference.cache
 L:\Practice\Coding\LeetCode\TwoSum\obj\Debug\netcoreapp3.1\TwoSum.AssemblyInfoInputs.cache
 L:\Practice\Coding\LeetCode\TwoSum\obj\Debug\netcoreapp3.1\TwoSum.AssemblyInfo.cs
 L:\Practice\Coding\LeetCode\TwoSum\obj\Debug\netcoreapp3.1\TwoSum.dll
 L:\Practice\Coding\LeetCode\TwoSum\obj\Debug\netcoreapp3.1\TwoSum.pdb
+L:\Practice\Coding\LeetCode\TwoSum\obj\Debug\netcoreapp3.1\TwoSum.csproj.CoreCompileInputs.cache
+L:\Practice\Coding\LeetCode\TwoSum\obj\Debug\netcoreapp3.1\TwoSum.genruntimeconfig.cache
+L:\Practice\Coding\LeetCode\TwoSum\obj\Debug\netcoreapp3.1\TwoSum.csprojAssemblyReference.cache
