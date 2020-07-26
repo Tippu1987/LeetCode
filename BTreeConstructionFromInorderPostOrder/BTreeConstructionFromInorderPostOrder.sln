@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTreeConstructionFromInorderPostOrder", "BTreeConstructionFromInorderPostOrder.csproj", "{613A71EA-E38F-4EC9-80D6-8662B54693C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{613A71EA-E38F-4EC9-80D6-8662B54693C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{613A71EA-E38F-4EC9-80D6-8662B54693C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{613A71EA-E38F-4EC9-80D6-8662B54693C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{613A71EA-E38F-4EC9-80D6-8662B54693C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F4A481B-736D-426A-8E79-115C74B233FD}
+	EndGlobalSection
+EndGlobal
