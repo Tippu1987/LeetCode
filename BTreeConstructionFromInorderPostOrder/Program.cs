@@ -8,10 +8,10 @@ namespace BTreeConstructionFromInorderPostOrder
     {
         static void Main(string[] args)
         {
-            //int[] inorder = new int[] { 9, 3, 15, 20, 7 };
-            int[] inorder = new int[] { 4, 8, 2, 5, 1, 6, 3, 7 };
+            int[] inorder = new int[] { 9, 3, 15, 20, 7 };
+            //int[] inorder = new int[] { 4, 8, 2, 5, 1, 6, 3, 7 };
             // int[] postorder = new int[] { 9, 15, 7, 20, 3 };
-            int[] postorder = new int[] { 8, 4, 5, 2, 6, 7, 3, 1 };
+            int[] postorder = new int[] { 9, 15, 7, 20, 3 };
             var res = TreeNode.BuildTree(inorder, postorder);
             Console.WriteLine(res.val);
         }
@@ -53,6 +53,32 @@ namespace BTreeConstructionFromInorderPostOrder
             //     root.right = BuildTree(inorderSubList.ToArray(), postOrderSubList.ToArray());
             //     return root;
             return Helper(inorder, postorder, 0, inorder.Length - 1, postorder.Length - 1);
+
+        }
+
+        public static TreeNode BuildTreeFromPreOrder(int[] preorder, int[] inorder)
+        {
+            if (inorder == null || preorder == null || inorder.Length == 0 || preorder.Length == 0) return null;
+            if (inorder.Length == 1) return new TreeNode(inorder[0]);
+            if (preorder.Length == 1) return new TreeNode(preorder[0]);
+
+            List<int> inorderList = inorder.ToList();
+            List<int> preOrderList = preorder.ToList();
+
+            int rootIndex = 0;
+            TreeNode root = new TreeNode(preOrderList[rootIndex]);
+
+            int inorderrootIndex = inorderList.IndexOf(preOrderList[rootIndex]);
+            List<int> inorderSubList = inorderList.GetRange(0, inorderrootIndex);
+            List<int> preOrderSubList = preOrderList.GetRange(1, preOrderList.Count - 1);
+
+            root.left = BuildTreeFromPreOrder(preOrderSubList.ToArray(), inorderSubList.ToArray());
+
+            inorderSubList = inorderList.GetRange(inorderrootIndex + 1, inorderList.Count - (inorderrootIndex + 1));
+            preOrderSubList = preOrderList.GetRange(1 + inorderrootIndex, preOrderList.Count - 1 - inorderrootIndex);
+
+            root.right = BuildTreeFromPreOrder(preOrderSubList.ToArray(), inorderSubList.ToArray());
+            return root;
 
         }
 
