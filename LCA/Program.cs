@@ -14,7 +14,7 @@ namespace LCA
             var left = LowestCommonAncestor(root.left, p, q);
             var right = LowestCommonAncestor(root.right, p, q);
             if (left != null && right != null) return root;
-            return left != null ? left : right;
+            return left ?? right;
         }
 
         public class TreeNode
