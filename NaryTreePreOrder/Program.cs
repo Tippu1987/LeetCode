@@ -9,21 +9,21 @@ namespace NaryTreePreOrder
     {
         static void Main(string[] args)
         {
-            Node root = new Node(1, new List<Node>());
+            Node root = new Node(44, new List<Node>());
             Node node2 = new Node(2);
             Node node3 = new Node(3, new List<Node>());
             Node node4 = new Node(4);
             Node node5 = new Node(5);
             Node node6 = new Node(6);
 
-            node3.children.Add(node5);
-            node3.children.Add(node6);
+            //node3.children.Add(node5);
+            //node3.children.Add(node6);
 
-            root.children.Add(node3);
-            root.children.Add(node2);
-            root.children.Add(node4);
+            //root.children.Add(node3);
+            //root.children.Add(node2);
+            //root.children.Add(node4);
 
-            var x = PreorderRecursive(root);
+            var x = LevelOrder(root);
 
 
         }
@@ -98,6 +98,36 @@ namespace NaryTreePreOrder
             res.Add(root.val);
             return res;
 
+        }
+
+        public static IList<IList<int>> LevelOrder(Node root)
+        {
+            List<IList<int>> result = new List<IList<int>>();
+            if (root == null) return result;
+            if (root.children == null || root.children.Count == 0)
+            {
+                result.Add(new List<int> { root.val });
+                return result;
+            }
+            Queue<Node> q = new Queue<Node>();
+            q.Enqueue(root);
+            while (q.Count > 0)
+            {
+                List<int> templist = new List<int>();
+                List<Node> childs = new List<Node>();
+                while (q.Count > 0)
+                {
+                    var tmp = q.Dequeue();
+                    if (tmp != null)
+                    {
+                        templist.Add(tmp.val);
+                        if (tmp.children != null) childs.AddRange(tmp.children);
+                    }
+                }
+                result.Add(templist);
+                childs.ForEach(x => q.Enqueue(x));
+            }
+            return result;
         }
     }
 
