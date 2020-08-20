@@ -37,10 +37,8 @@ namespace AmazonRecommendationSystem
                     var set2 = output.FirstOrDefault(x => x.Contains(item.second)); //O(n)
                     if (set1 == null)
                         set2.UnionWith(new SortedSet<string> { item.first, item.second });
-
                     else if (set2 == null)
                         set1.UnionWith(new SortedSet<string> { item.first, item.second });
-
                     else if (set1 != set2)
                     {
                         set1.UnionWith(set2);
@@ -65,7 +63,6 @@ namespace AmazonRecommendationSystem
             second = s;
         }
     }
-
     public class SortedSetComparer<T> : IComparer<SortedSet<T>> where T : IComparable<T>
     {
         public int Compare(SortedSet<T> x, SortedSet<T> y)
@@ -73,7 +70,6 @@ namespace AmazonRecommendationSystem
             // Null checks
             if (x == null) return y == null ? 0 : 1;
             if (y == null) return -1;
-
             // First order by Count descending
             var countComparison = x.Count.CompareTo(y.Count);
             if (countComparison != 0) return countComparison * -1;
@@ -83,7 +79,6 @@ namespace AmazonRecommendationSystem
             var lexicalComparison = x.Select((item, index) =>
                 x.ElementAt(index).CompareTo(y.ElementAt(index)))
                 .FirstOrDefault(result => result != 0);
-
             return lexicalComparison == 0 ? countComparison : lexicalComparison;
         }
     }
