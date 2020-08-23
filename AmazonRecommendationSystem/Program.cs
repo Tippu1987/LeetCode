@@ -11,14 +11,10 @@ namespace AmazonRecommendationSystem
             List<PairString> input = new List<PairString> 
             {
             
-            new PairString("item3","item4"),
-            //new PairString("item5","item6"),
-            new PairString("item4","item5"),
-            new PairString("item5","item6"),
-
             new PairString("item1","item2"),
-            new PairString("item7","item1"),
-            new PairString("item2","item8")
+            new PairString("item4","item5"),
+            new PairString("item3","item4"),
+            new PairString("item1","item4"),
             };
             //O(n^2) Algorithm
             Console.WriteLine(MaxItemAssociatoinGroup(input).Count);
