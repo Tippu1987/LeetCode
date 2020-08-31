@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordLadder", "WordLadder.csproj", "{2BFFABF6-25EA-423B-B76C-EF6C2349D87C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumRootToLeaf", "SumRootToLeaf.csproj", "{29873AB4-C76C-4342-A9BD-0D360BBD6696}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2BFFABF6-25EA-423B-B76C-EF6C2349D87C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BFFABF6-25EA-423B-B76C-EF6C2349D87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BFFABF6-25EA-423B-B76C-EF6C2349D87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BFFABF6-25EA-423B-B76C-EF6C2349D87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29873AB4-C76C-4342-A9BD-0D360BBD6696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29873AB4-C76C-4342-A9BD-0D360BBD6696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29873AB4-C76C-4342-A9BD-0D360BBD6696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29873AB4-C76C-4342-A9BD-0D360BBD6696}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6424864D-C931-4384-A4F7-8D3C49D611E9}
+		SolutionGuid = {54A0D0AB-CA56-4796-B4D5-52EB5D2438CF}
 	EndGlobalSection
 EndGlobal
