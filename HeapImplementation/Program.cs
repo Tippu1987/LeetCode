@@ -7,31 +7,43 @@ namespace HeapImplementation
     {
         static void Main(string[] args)
         {
-            Heap h = new Heap(50);
-            h.Insert(7);
-            h.Insert(2);
-            h.Insert(1);
-            h.Insert(25);
-            h.Insert(3);
-            h.Insert(17);
-            h.Insert(36);
-            h.Insert(19);
-            h.Insert(100);
-            Console.WriteLine("-----------------------------------");
-            Console.WriteLine(h.Delete());
-            h.PrintHeap();
-            Console.WriteLine("-----------------------------------");
-            Console.Write(h.Delete());
-            Console.WriteLine("-----------------------------------");
-            h.PrintHeap();
-            Console.WriteLine("-----------------------------------");
-            Console.Write(h.Delete());
-            Console.WriteLine("-----------------------------------");
-            h.PrintHeap();
-            Console.Write(h.Delete());
-            Console.WriteLine("-----------------------------------");
-            h.PrintHeap();
+            Console.WriteLine(stringcomp("1234","12345"));
         }
+
+        public static int stringcomp(string s1, string s2)
+        {
+            //error check
+            if (string.IsNullOrEmpty(s1) && string.IsNullOrEmpty(s2)) return 0; //Adding isnullorempty complexity
+            if (string.IsNullOrEmpty(s1)) { if (s2.Length == 0) return 0; }
+            if (string.IsNullOrEmpty(s2)) { if (s1.Length == 0) return 0; }
+
+
+            //Assume the strings are stripped off of 0s in the beginning
+            int num1 = 0;
+            //for i=0 thru s1 && j=0 thru s2
+            for (int i = 0; i < s1.Length; i++)
+            {
+                num1 = num1 * 10 + (s1[i] - '1' + 1);  //O(s1)
+            }
+            int num2 = 0;
+            for (int i = 0; i < s2.Length; i++)
+            {
+                num2 = num2 * 10 + (s2[i] - '1' + 1);  //O(S2)
+            }
+
+
+            //O(1) below
+            int result = int.MinValue;
+            if (num1 < num2)
+                result = -1;
+            else if (num1 > num2)
+                result = 1;
+            else
+                result = 0;
+            //O(Max(s1,s2))
+            return result;
+        }
+
     }
 
     class Heap
@@ -109,4 +121,6 @@ namespace HeapImplementation
         }
 
     }
+
+
 }
